@@ -114,7 +114,7 @@
 
 
   <welcome-file-list>
-    <welcome-file>/Home/index.jsp</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
   
     <!--去掉jsp页面的空白-->

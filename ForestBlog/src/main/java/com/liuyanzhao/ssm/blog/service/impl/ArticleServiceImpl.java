@@ -44,7 +44,7 @@ public class ArticleServiceImpl implements ArticleService {
     public Integer countArticle(Integer status) {
         Integer count = 0;
 
-        jedis.set("countArticle","adsfasdf");
+        jedis.set("countArticle","6345654654");
 
 
         try {
