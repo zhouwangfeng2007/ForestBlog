@@ -12,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import redis.clients.jedis.Jedis;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -37,9 +38,15 @@ public class ArticleServiceImpl implements ArticleService {
     @Autowired(required = false)
     private ArticleTagRefMapper articleTagRefMapper;
 
+    @Autowired
+    private Jedis jedis;
     @Override
     public Integer countArticle(Integer status) {
         Integer count = 0;
+
+        jedis.set("countArticle","adsfasdf");
+
+
         try {
             count = articleMapper.countArticle(status);
         } catch (Exception e) {

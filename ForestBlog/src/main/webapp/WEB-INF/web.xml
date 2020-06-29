@@ -43,6 +43,7 @@
    </listener>
 
 
+
   <!-- 以下3项参数与log4j的配置相关 -->
   <context-param>
     <param-name>log4jConfigLocation</param-name>
@@ -113,7 +114,7 @@
 
 
   <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>/Home/index.jsp</welcome-file>
   </welcome-file-list>
   
     <!--去掉jsp页面的空白-->
