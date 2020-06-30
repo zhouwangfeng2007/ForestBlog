@@ -8,6 +8,13 @@
                             http://www.springframework.org/schema/context
                             http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 910dc26246f97cb4d71981f96aa114e8aa7dfe8a
     <bean id="PropertyPlaceholderConfigurer"
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="order" value="1"/>
