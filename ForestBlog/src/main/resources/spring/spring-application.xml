@@ -10,9 +10,20 @@
 
 
 
-    <!--jedis 连接单机 redis-->
-    <import resource="classpath:jedis/redis-config.xml"/>
 
 
+    <bean id="PropertyPlaceholderConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="order" value="1"/>
+        <property name="ignoreUnresolvablePlaceholders" value="true"/>
+        <property name="locations">
+            <list>
+                <!--读取src目录的db.properties文件-->
+                <value>classpath:db.properties</value>
+                <!--读取src目录的redis-config.properties文件-->
+                <value>classpath:redis.properties</value>
+            </list>
+        </property>
+    </bean>
 
 </beans>

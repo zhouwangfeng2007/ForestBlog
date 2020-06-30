@@ -48,6 +48,11 @@ public class HomeResourceInterceptor implements HandlerInterceptor {
      */
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object contoller) throws IOException {
+        boolean b = contoller instanceof HandlerMethod;
+        if (!b) {
+            return true;
+        }
+
         HandlerMethod currentController = (HandlerMethod) contoller;
         if (currentController == null) {
             return false;
